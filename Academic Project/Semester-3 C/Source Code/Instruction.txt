@@ -1,0 +1,15 @@
+Asalamualikum User.
+
+->Admin username :12345
+->Password       :iftekhar
+
+Default student password :12345
+Default teacher password :12345
+
+
+***Add given file for testing****
+->If you run this program first time UMS(IAS) folder will create automatically in C drive.Delete this folder and paste our given UMS(IAS) folder.
+
+Iftekhar Ahamed Siddiquee
+Sumi Akter
+Dipta Kumar Saha 
