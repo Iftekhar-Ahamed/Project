@@ -1,0 +1,120 @@
+DATABASE UMS:
+
+CREATE DATABASE `ums`
+
+PROFILE:
+
+CREATE TABLE `profile` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `FIRST_NAME` varchar(50) NOT NULL,
+  `LAST_NAME` varchar(50) DEFAULT NULL,
+  `GENDER` varchar(10) NOT NULL,
+  `ADDRESS` varchar(50) NOT NULL,
+  `PHONE_NUMBER` varchar(11) NOT NULL,
+  `PHONE_NUMBER2` varchar(11) DEFAULT NULL,
+  `ID_TYPE` varchar(20) NOT NULL,
+  `ID_NO` varchar(20) NOT NULL,
+  `BLOOD_GROUP` varchar(3) NOT NULL,
+  `DOB` date NOT NULL,
+  `EMAIL` varchar(50) NOT NULL,
+  `FATHERSNAME` varchar(100) NOT NULL,
+  `MOTHERSNAME` varchar(100) NOT NULL,
+  `NATIONALITY` varchar(20) NOT NULL,
+  `USERTYPE` varchar(100) NOT NULL,
+  `DEPARTMENT` varchar(100) NOT NULL,
+  `PASSWORD` varchar(50) NOT NULL,
+  PRIMARY KEY (`ID`)
+) AUTO_INCREMENT=1;
+
+ACADEMIC INFO :
+
+CREATE TABLE `academic_info` (
+  `ID` bigint(20) NOT NULL,
+  `BOARD_EXAM` varchar(10) NOT NULL,
+  `YEAR` int(8) NOT NULL,
+  `GRADE` double NOT NULL,
+  `GROUP` varchar(50) NOT NULL,
+  `INST` varchar(100) NOT NULL
+)
+
+COURSE :
+
+CREATE TABLE `course` (
+  `DEPARTMENT_NAME` varchar(100) NOT NULL,
+  `COURSE_CODE` varchar(50) NOT NULL,
+  `COURSE_NAME` varchar(100) NOT NULL,
+  `PREREQUISITE` varchar(100) DEFAULT NULL,
+  `CREDIT` double NOT NULL
+)
+
+DEPARTMENT :
+
+CREATE TABLE `department` (
+  `DEPARTMENT_NAME` varchar(100) NOT NULL,
+  `TOTALCREDIT` double NOT NULL,
+  `TYPE` varchar(100) NOT NULL
+)
+
+INTAKE :
+
+CREATE TABLE `intake` (
+  `INTAKEID` int(11) NOT NULL,
+  `STUDENTID` varchar(50) NOT NULL
+)
+
+NOTICE :
+
+CREATE TABLE `notice` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `TITLE` varchar(3000) NOT NULL,
+  `DESCRIPTION` longtext NOT NULL,
+  PRIMARY KEY (`ID`)
+)AUTO_INCREMENT=1;
+
+DATABASE : registration
+
+CREATE DATABASE `registration`
+
+REGISTRATION REPORT:
+
+CREATE TABLE `registrationreport` (
+  `ID` bigint(20) NOT NULL,
+  `COURSE_CODE` varchar(20) NOT NULL,
+  PRIMARY KEY (`ID`,`COURSE_CODE`)
+)
+
+SECTION :
+
+CREATE TABLE `section` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `COURSE_CODE` varchar(50) NOT NULL,
+  `TID` bigint(20) NOT NULL,
+  `SEMESTER` varchar(100) NOT NULL,
+  `STATUS` int(11) NOT NULL,
+  PRIMARY KEY (`ID`)
+)AUTO_INCREMENT=1;
+
+SEMESTER NAME :
+
+CREATE TABLE `sname` (
+  `SEMESTERNAME` varchar(50) NOT NULL,
+  `STATUS` int(11) NOT NULL,
+  `MAXCREDIT` double NOT NULL,
+  PRIMARY KEY (`SEMESTERNAME`)
+) 
+
+DATABASE : curriculum
+
+CREATE DATABASE `curriculum`
+
+
+DATABASE : messenger
+
+CREATE DATABASE `messenger`
+
+CREATE TABLE `detector` (
+  `s_ID` int(20) NOT NULL,
+  `r_ID` int(20) NOT NULL,
+  `table_ID` int(20) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`table_ID`)
+)AUTO_INCREMENT=1;
