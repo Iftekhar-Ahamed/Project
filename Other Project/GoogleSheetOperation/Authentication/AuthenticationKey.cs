@@ -19,7 +19,7 @@ namespace GoogleSheetOperation.Authentication
         public void CreateCredential()
         {
 
-            var serviceAccountEmail = "iftekhar-ahamed-siddiquee-980@abstract-stage-398811.iam.gserviceaccount.com";
+            var serviceAccountEmail = "";
             var certificate = new X509Certificate2("D:\\GITHUB\\GoogleSheetOperation\\abstract-stage-398811-ed413e41a3a1.p12", "notasecret", X509KeyStorageFlags.Exportable);
 
             
